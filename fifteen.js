@@ -109,7 +109,7 @@ function movableTile(c)
 		
 		var tileAbove = blank.previousSibling.previousSibling.previousSibling.previousSibling;
 			
-		if (tileAbove != null) 
+		if (tileAbove !== null) 
 		{
 			if (c.isSameNode(tileAbove))
 			{
@@ -119,7 +119,7 @@ function movableTile(c)
 
 		var tileBelow = blank.nextSibling.nextSibling.nextSibling.nextSibling;
 			
-		if (tileBelow != null) 
+		if (tileBelow !== null) 
 		{
 			if (c.isSameNode(tileBelow)) 
 			{
@@ -192,8 +192,9 @@ function hover()
 
 		for(var i = 0; i < neighbors.length;i++)
 		{
-			if(neighbors[i] == blankspace)
+			if(neighbors[i] == blankspace){
 			this.addClassName('movablepiece');
+			}
 		}
 		
 	}
